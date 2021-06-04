@@ -114,10 +114,10 @@ console.log(x)
 
 // ԱՅՍԻՆՔՆ Ի՞ՆՉ OBJECT որպես THIS հանդես գա էս ֆունկցիայի մեջ՝ 
 
-cB(item){
-  console.log(this)
-  return item * 5;
-}
+// cB(item){
+//   console.log(this)
+//   return item * 5;
+// }
 
 // Callback-ի երկրորդ արգումենտը որպես this հանդես կգա callback-ի առաջին արգումենտի մեջ:
 
@@ -140,3 +140,13 @@ console.log(arrObj);
 // arr.every > արդյոք ՅՈՒՐԱՔԱՆՉՅՈՒՐԸ բավարարում է ինչ-որ պայմանի:
 
 // arr.sum > արդյոք ԻՆՉ-ՈՐ ՄԵԿԸ բավարարում է ինչ-որ պայմանի:
+
+//Promises
+
+let promise = new Promise(function(resolve, reject) {
+    resolve(1);
+  
+    setTimeout(() => resolve(2), 1000);
+  });
+  
+  promise.then(console.log);
