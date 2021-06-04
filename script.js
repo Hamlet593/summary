@@ -184,4 +184,16 @@ function printNumbers(from, to) {
   }
   printNumbers(5, 10);
 
-  //
+  //Prototypes
+
+  let animal = {
+    eat() {
+      this.full = true;
+    }
+  };
+  
+  let rabbit = {
+    __proto__: animal
+  };
+  
+  rabbit.full;
