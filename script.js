@@ -97,3 +97,46 @@ function StexcirMercedes(model, year){
 // Եթե hint-ը number է կամ եթե hint-ը default է, կանչվում է object-ի valueOf-ը եթե կա վերջ, եթե չէ նոր կկանչվի object-ի toString-ը:
 // Եթե hint-ը string է, ապա նախ կանչվում է object-ի toString-ը, եթե չէ նոր կկանչվի object-ի valueOf-ը:
 
+// Array Methods
+
+let arr = [1, 2, 3, 4, 5, 6];
+
+function cB(item){
+  console.log(this)
+  return item * 5;
+}
+
+let x = arr.map(cB, {obj: 'obj'})
+
+console.log(x)
+
+// Այսինքն էս cB ֆունկցիայի մեջ գրված console.log(this) this-ը դա let x = arr.map(cB, {obj: 'obj'}) էն {obj: 'obj'}-ն է:
+
+// ԱՅՍԻՆՔՆ Ի՞ՆՉ OBJECT որպես THIS հանդես գա էս ֆունկցիայի մեջ՝ 
+
+cB(item){
+  console.log(this)
+  return item * 5;
+}
+
+// Callback-ի երկրորդ արգումենտը որպես this հանդես կգա callback-ի առաջին արգումենտի մեջ:
+
+// filter-ն էլ է վերադարձնում նոր array, որի մեջ կլինեն այն էլեմենտները, որոնք truthy value են, դա կնշանակի, որ filter եղղած array-ում ես ուզում եմ, որ array-ի էդ էլեմենտը լինի:
+// Եթե false value եղավ՝ էդ էլեմենտը ֆիլտր կլինի և դուրս կգա:
+
+// find-ը վերադարձնում է առաջին truthy արժեքը: Մի հատ թիվ ասենք, ոչ թե array, ու էլի նախորդի հետ բան չի անում:
+
+// arr.forEach-ը ոչինչ չի վերադարձնում, մենակ ցիկլ է ֆռում:
+
+let arrObj = [
+  {name: 'Hamlet', surName: 'Muradyan'},
+  {name: 'Ani', surName: 'Davtyan'},
+];
+arrObj.forEach(item => item.fullName = `${item.name} ${item.surName}`);
+console.log(arrObj);
+
+// forEach-ը կգրենք, երբ որ հարկավոր չի ինչ որ array վերադարձնել, այլ ուզում ենք էղածի վրա ցիկլ ֆռանք ու ինչ-որ բան փոխենք հենց մեր սկզբնական array-ի մեջ:
+
+// arr.every > արդյոք ՅՈՒՐԱՔԱՆՉՅՈՒՐԸ բավարարում է ինչ-որ պայմանի:
+
+// arr.sum > արդյոք ԻՆՉ-ՈՐ ՄԵԿԸ բավարարում է ինչ-որ պայմանի:
