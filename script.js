@@ -46,3 +46,12 @@ Object.assign(user, perm1, perm2);
 // Իսկ arrow function-ները վերը նշված կանոններից և ոչ մեկին չեն ենթարկվում:
 // Ձևակերպենք հետևյալ կերպ. arrow function-ը չունի իր սեփական this-ը: THIS-ը ARROW FUNCTION-ՈՒՄ ԴԱ ԷՆ ENVIRONMENT-Ի THIS-Ն Ա, ՈՐՏԵՂ ՈՐ ԳՐՎԱԾ Է ARROW FUNCTION-Ը: Այլ կերպ ասած,
 // arrow function-ը իր համար որպես this վերցնում է outer scope-ում this-ի արժեքը:
+
+//function Constructor
+
+function StexcirMercedes(model, year){
+    this.maknish = model;
+    this.tiv = year;
+  }
+  let imAvton = new StexcirMercedes('Fusion', 2016);
+  console.log(imAvton)
