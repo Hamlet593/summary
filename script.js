@@ -150,3 +150,21 @@ let promise = new Promise(function(resolve, reject) {
   });
   
   promise.then(console.log);
+
+  //Clases
+
+  class User {
+
+    constructor(name) {
+      this.name = name;
+    }
+  
+    sayHi() {
+      console.log(this.name);
+    }
+  
+  }
+  
+  // Использование:
+  let user = new User("Hovo");
+  user.sayHi();
