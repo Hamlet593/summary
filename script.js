@@ -82,3 +82,18 @@ function StexcirMercedes(model, year){
   
   let market1 = new Market('kanachi, sox', new Girl('Manush', 27));
   console.log(market1)
+
+  //Symbol To Primitive
+
+  let obj = {
+    name: 'hamo'
+  }
+  
+  obj[Symbol.toPrimitive] = function(hint){
+    console.log(hint, 'My obj to primitive')
+    return this.age;
+  }
+
+// Եթե hint-ը number է կամ եթե hint-ը default է, կանչվում է object-ի valueOf-ը եթե կա վերջ, եթե չէ նոր կկանչվի object-ի toString-ը:
+// Եթե hint-ը string է, ապա նախ կանչվում է object-ի toString-ը, եթե չէ նոր կկանչվի object-ի valueOf-ը:
+
