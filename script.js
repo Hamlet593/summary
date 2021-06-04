@@ -47,7 +47,7 @@ Object.assign(user, perm1, perm2);
 // Ձևակերպենք հետևյալ կերպ. arrow function-ը չունի իր սեփական this-ը: THIS-ը ARROW FUNCTION-ՈՒՄ ԴԱ ԷՆ ENVIRONMENT-Ի THIS-Ն Ա, ՈՐՏԵՂ ՈՐ ԳՐՎԱԾ Է ARROW FUNCTION-Ը: Այլ կերպ ասած,
 // arrow function-ը իր համար որպես this վերցնում է outer scope-ում this-ի արժեքը:
 
-//function Constructor
+//function Constructor1
 
 function StexcirMercedes(model, year){
     this.maknish = model;
@@ -55,3 +55,30 @@ function StexcirMercedes(model, year){
   }
   let imAvton = new StexcirMercedes('Fusion', 2016);
   console.log(imAvton)
+
+//function Constructor2
+
+  function Market(product, aghjik){
+    this.isOpen = false;
+    this.product = product;
+    if(aghjik instanceof Girl){
+      this.girl = aghjik
+    }
+    else{
+      this.girl = 'instanse che'
+    }
+    this.open = function(){
+      this.isOpen = true;
+    }
+    this.close = function(){
+      this.isOpen = false;
+    }
+  }
+  
+  function Girl(name, age){
+    this.name = name;
+    this.age = age;
+  }
+  
+  let market1 = new Market('kanachi, sox', new Girl('Manush', 27));
+  console.log(market1)
