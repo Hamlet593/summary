@@ -15,3 +15,12 @@ let menu = {
   }
   
   multiplyNumeric(menu);
+
+  //Coping Object
+
+let user = { name: "Hamo" };
+
+let perm1 = { canView: true };
+let perm2 = { etiding: true };
+
+Object.assign(user, perm1, perm2);
