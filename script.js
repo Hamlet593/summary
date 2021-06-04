@@ -197,3 +197,13 @@ function printNumbers(from, to) {
   };
   
   rabbit.full;
+
+  //Json
+
+  let user = {
+    name: "Василий Иванович",
+    age: 35
+  };
+  
+  let user2 = JSON.stringify(user)
+  console.log(user)
